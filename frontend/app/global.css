@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ECEBE7;
+  color: #111111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Better text rendering */
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Cleaner input styling */
+input::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+}
