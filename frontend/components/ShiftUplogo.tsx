@@ -1,88 +1,132 @@
-// export default function ShiftUpLogo() {
-//   return (
-//     <div className="relative flex items-center">
-
-//       {/* TEXT */}
-//       <h1 className="text-5xl font-extrabold tracking-tight">
-
-//         <span className="text-[#1F2A44]">
-//           Shift
-//         </span>
-
-//         <span className="text-[#1F2A44]">
-//           Up
-//         </span>
-
-//       </h1>
-
-//       {/* ARROW */}
-//       <div className="absolute left-[145px] top-[8px] rotate-12">
-
-//         <div className="relative h-[10px] w-[120px] rounded-full bg-[#1F2A44]">
-
-//           <div className="absolute right-[-2px] top-[-7px] h-0 w-0 border-b-[12px] border-l-[18px] border-t-[12px] border-b-transparent border-l-[#1F2A44] border-t-transparent">
-//           </div>
-
-//         </div>
-
-//       </div>
-
-//     </div>
-//   );
-// }
-export default function ShiftUpLogo() {
+export default function shim() {
   return (
-    <div className="relative flex items-center">
+    <main className="min-h-screen bg-[#F5F4F1] text-black">
 
-      {/* TEXT */}
-      <h1 className="relative text-5xl font-extrabold tracking-tight">
+      {/* Navbar */}
+      <nav className="flex items-center justify-between px-8 py-6">
 
-        <span className="text-[#1F2A44]">
-          Shift
-        </span>
+        <div className="flex items-center gap-3">
 
-        {/* U + P */}
-        <span className="relative text-[#1F2A44]">
+          <img
+            src="/shiftuplogo.png"
+            alt="ShiftUp Logo"
+            className="h-20 w-auto object-contain"
+          />
 
-          U
+          <h1 className="text-4xl font-bold tracking-tight text-[#1F2A44]">
+            ShiftUp
+          </h1>
 
-          {/* CURVED ARROW */}
-          <span className="absolute left-[18px] top-[-6px]">
+        </div>
 
-              <svg
-    width="90"
-    height="45"
-    viewBox="0 0 90 45"
-    fill="none"
-  >
-    <path
-      d="M0 30 C25 12, 50 10, 78 5"
-      stroke="#1F2A44"
-      strokeWidth="6"
-      strokeLinecap="round"
-      fill="none"
-    />
+      </nav>
 
-    <path
-      d="M72 1 L84 5 L75 15"
-      fill="none"
-      stroke="#1F2A44"
-      strokeWidth="6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center px-6 pt-24 text-center">
 
-          </span>
+        <div className="mb-6 rounded-full bg-[#D6E0D4] px-4 py-2 text-sm font-medium text-[#1F2A44]">
+          Trusted Temporary Work Platform
+        </div>
 
-        </span>
+        <h1 className="max-w-4xl text-5xl font-bold leading-tight text-[#1F2A44] md:text-7xl">
+          Find flexible work that fits your life.
+        </h1>
 
-        <span className="text-[#1F2A44]">
-          p
-        </span>
+        <p className="mt-6 max-w-2xl text-lg text-black/70">
+          ShiftUp connects trusted workers with businesses looking for
+          temporary, Odd-Jobs, and flexible opportunities.
+        </p>
 
-      </h1>
+        {/* CARDS */}
+        <div className="mt-16 grid w-full max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
 
-    </div>
+          {/* GET STARTED */}
+          <a
+            href="/login"
+            className="rounded-3xl bg-white p-8 text-left shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition hover:scale-[1.02]"
+          >
+
+            <div className="mb-4 flex items-center justify-between">
+
+              <h2 className="text-2xl font-bold text-[#1F2A44]">
+                Get Started
+              </h2>
+
+              <span className="rounded-full bg-[#D6E0D4] px-4 py-2 text-sm font-medium text-[#1F2A44]">
+                Employee
+              </span>
+
+            </div>
+
+            <p className="text-black/60 leading-relaxed">
+              Browse trusted temporary and flexible work opportunities
+              tailored for your schedule.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3 text-sm">
+
+              <div className="rounded-full bg-[#F5F4F1] px-4 py-2">
+                Odd-Jobs
+              </div>
+
+              <div className="rounded-full bg-[#F5F4F1] px-4 py-2">
+                Flexible
+              </div>
+
+              <div className="rounded-full bg-[#F5F4F1] px-4 py-2">
+                Verified
+              </div>
+
+            </div>
+
+          </a>
+
+          {/* POST JOB */}
+          <a
+            href="/employerlogin"
+            className="rounded-3xl bg-white p-8 text-left shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition hover:scale-[1.02]"
+          >
+
+            <div className="mb-4 flex items-center justify-between">
+
+              <h2 className="text-2xl font-bold text-[#1F2A44]">
+                Post a Job
+              </h2>
+
+              <span className="rounded-full bg-[#D6E0D4] px-4 py-2 text-sm font-medium text-[#1F2A44]">
+                Employer
+              </span>
+
+            </div>
+
+            <p className="text-black/60 leading-relaxed">
+              Find trusted temporary workers and manage applications
+              through ShiftUp.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3 text-sm">
+
+              <div className="rounded-full bg-[#F5F4F1] px-4 py-2">
+                Fast Hiring
+              </div>
+
+              <div className="rounded-full bg-[#F5F4F1] px-4 py-2">
+                Verified Users
+              </div>
+
+              <div className="rounded-full bg-[#F5F4F1] px-4 py-2">
+                Trusted
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
   );
 }
+
