@@ -161,9 +161,20 @@ export default function DashboardPage() {
 
               <div className="flex items-center gap-4">
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#A0CDCE] text-xl font-bold text-[#2D5B5C]">
-                  F
-                </div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-300">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className="h-8 w-8 text-gray-600"
+  >
+    <path
+      fillRule="evenodd"
+      d="M12 2a5 5 0 100 10 5 5 0 000-10zm-7 18a7 7 0 1114 0H5z"
+      clipRule="evenodd"
+    />
+  </svg>
+</div>
 
                 <div>
                   <h3 className="font-bold text-[#2D5B5C]">
@@ -179,25 +190,7 @@ export default function DashboardPage() {
 
             </div>
 
-            {/* SUBSCRIPTION */}
-            <div className="mt-6 rounded-3xl bg-[#2D5B5C] p-6 text-white shadow-[0_2px_12px_rgba(0,0,0,0.05)]">
-
-              <h2 className="text-3xl font-bold">
-                ShiftUp VIP
-              </h2>
-
-              <p className="mt-3 text-white/70 leading-relaxed">
-                Unlock more daily applications and trusted opportunities.
-              </p>
-
-            <a
-  href="/vip-dashboard"
-  className="mt-6 block rounded-2xl bg-white px-5 py-3 text-center font-medium text-[#2D5B5C] hover:scale-[1.02] transition"
->
-  View VIP Dashboard
-</a>
-
-            </div>
+          
 
           </div>
 
