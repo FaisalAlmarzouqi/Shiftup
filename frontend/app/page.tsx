@@ -100,7 +100,7 @@ export default function home() {
             </div>
 
             <p className="text-black/60 leading-relaxed">
-              Find trusted temporary workers through ShiftUp.
+              Find trusted temporary workers through Us.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3 text-sm">

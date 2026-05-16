@@ -68,86 +68,123 @@ export default function DashboardPage() {
             {/* JOB CARDS */}
             <div className="grid gap-5">
 
-              {/* JOB CARD */}
-              {[
-                {
-                  title: "Photography Assistant",
-                  desc: "Assist with equipment setup and lighting during a private photoshoot.",
-                  tag: "Verified",
-                  time: "4 PM - 9 PM",
-                  location: "Manama",
-                  pay: "35 BD",
-                },
-                {
-                  title: "Background Actor",
-                  desc: "Looking for extras for a short commercial shoot this weekend.",
-                  tag: "Trusted",
-                  time: "Weekend",
-                  location: "Seef",
-                  pay: "50 BD",
-                },
-                {
-                  title: "Gaming Event Assistant",
-                  desc: "Help manage registrations and setup for a local gaming tournament.",
-                  tag: "VIP",
-                  time: "Friday",
-                  location: "Isa Town",
-                  pay: "45 BD",
-                },
-                {
-                  title: "Pet Sitting Helper",
-                  desc: "Help care for two small dogs during evening hours.",
-                  tag: "Verified",
-                  time: "Evening Shift",
-                  location: "Riffa",
-                  pay: "20 BD",
-                },
-              ].map((job, index) => (
-                <div
-                  key={index}
-                  className="rounded-3xl bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.04)]"
-                >
+           {/* JOB CARDS */}
+<div className="grid gap-6">
 
-                  <div className="flex items-start justify-between">
+  {[
+    {
+      title: "Photography Assistant",
+      desc: "Assist with equipment setup and lighting during a private photoshoot.",
+      tag: "Verified",
+      time: "4 PM - 9 PM",
+      location: "Manama",
+      pay: "35 BD",
+    },
+    {
+      title: "Background Actor",
+      desc: "Looking for extras for a short commercial shoot this weekend.",
+      tag: "Trusted",
+      time: "Weekend",
+      location: "Seef",
+      pay: "50 BD",
+    },
+    {
+      title: "Gaming Event Assistant",
+      desc: "Help manage registrations and setup for a local gaming tournament.",
+      tag: "VIP",
+      time: "Friday",
+      location: "Isa Town",
+      pay: "45 BD",
+    },
+    {
+      title: "Pet Sitting Helper",
+      desc: "Help care for two small dogs during evening hours.",
+      tag: "Verified",
+      time: "Evening Shift",
+      location: "Riffa",
+      pay: "20 BD",
+    },
+  ].map((job, index) => (
+    <div
+      key={index}
+      className="overflow-hidden rounded-[32px] bg-white shadow-[0_2px_15px_rgba(0,0,0,0.05)]"
+    >
 
-                    <div>
-                      <h2 className="text-2xl font-bold text-[#2D5B5C]">
-                        {job.title}
-                      </h2>
+      {/* TOP IMAGE */}
+      <div className="relative h-52 w-full">
+        <img
+          src="/job-example.jpg"
+          alt="Job"
+          className="h-full w-full object-cover"
+        />
 
-                      <p className="mt-2 text-black/60">
-                        {job.desc}
-                      </p>
-                    </div>
+        <div className="absolute right-4 top-4 rounded-full bg-[#A0CDCE] px-4 py-2 text-sm font-medium text-[#2D5B5C] backdrop-blur-md">
+          {job.tag}
+        </div>
+      </div>
 
-                    <span className="rounded-full bg-[#A0CDCE] px-4 py-2 text-sm font-medium text-[#2D5B5C]">
-                      {job.tag}
-                    </span>
+      {/* CONTENT */}
+      <div className="p-6">
 
-                  </div>
+        {/* TITLE */}
+        <div className="flex items-start gap-4">
 
-                  <div className="mt-4 flex flex-wrap gap-3 text-sm">
+          {/* DEFAULT PROFILE ICON */}
+          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#DCEEEE]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-7 w-7 text-[#2D5B5C]"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12 2a5 5 0 100 10 5 5 0 000-10zm-7 18a7 7 0 1114 0H5z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </div>
 
-                    <div className="rounded-full bg-[#F5F4F1] px-4 py-2">
-                      {job.time}
-                    </div>
+          <div className="flex-1">
+            <h2 className="text-2xl font-bold text-[#2D5B5C]">
+              {job.title}
+            </h2>
 
-                    <div className="rounded-full bg-[#F5F4F1] px-4 py-2">
-                      {job.location}
-                    </div>
+            <p className="mt-2 text-[15px] leading-relaxed text-black/60">
+              {job.desc}
+            </p>
+          </div>
 
-                    <div className="rounded-full bg-[#F5F4F1] px-4 py-2">
-                      {job.pay}
-                    </div>
+        </div>
 
-                  </div>
+        {/* INFO PILLS */}
+        <div className="mt-6 flex flex-wrap gap-3">
 
-                  <button className="mt-5 rounded-2xl bg-[#BE220D] px-6 py-3 font-medium text-white hover:scale-[1.02] transition">
-                    Apply Now
-                  </button>
+          <div className="rounded-full bg-[#F5F4F1] px-4 py-2 text-sm text-[#2D5B5C]">
+            ⏰ {job.time}
+          </div>
 
-                </div>
-              ))}
+          <div className="rounded-full bg-[#F5F4F1] px-4 py-2 text-sm text-[#2D5B5C]">
+            📍 {job.location}
+          </div>
+
+          <div className="rounded-full bg-[#F5F4F1] px-4 py-2 text-sm text-[#2D5B5C]">
+            💰 {job.pay}
+          </div>
+
+        </div>
+
+        {/* APPLY BUTTON */}
+        <button className="mt-6 w-full rounded-2xl bg-[#BE220D] px-6 py-3 font-medium text-white transition hover:scale-[1.01]">
+          Apply Now
+        </button>
+
+      </div>
+
+    </div>
+  ))}
+
+</div>
 
             </div>
 
