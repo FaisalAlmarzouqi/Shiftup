@@ -145,7 +145,7 @@ export default function EmployerRegisterPage() {
 
           {/* BUTTON */}
           <a
-            href="/employer-login"
+            href="/employeractuallogin"
             className="block w-full rounded-2xl bg-[#1F2A44] py-4 text-center font-medium text-white hover:opacity-90 transition"
           >
             Register Business
@@ -159,7 +159,7 @@ export default function EmployerRegisterPage() {
           Already registered as an employer?
 
           <a
-            href="/employer-login"
+            href="/employeractuallogin"
             className="ml-2 font-medium text-[#1F2A44]"
           >
             Login

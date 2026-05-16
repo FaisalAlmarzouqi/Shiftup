@@ -30,7 +30,7 @@ export default function LoginPage() {
   href="/dashboard"
   className="block w-full rounded-2xl bg-[#1F2A44] py-4 text-center text-white hover:opacity-90 transition"
 >
-  Login
+  Login as employee
 </a>
         </div>
 
