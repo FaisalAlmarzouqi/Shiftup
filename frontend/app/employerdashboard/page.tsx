@@ -27,7 +27,7 @@ export default function EmployerDashboardPage() {
               onClick={() => (window.location.href = "/employerlogin")}
               className="rounded-2xl bg-[#1F2A44] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90"
             >
-              Employer Login
+             Get started as an Employer
             </button>
           </div>
 

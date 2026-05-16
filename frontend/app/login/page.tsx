@@ -1,4 +1,10 @@
+"use client";
+
+import { useState } from "react";
+
 export default function LoginPage() {
+  const [error, setError] = useState("");
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#F5F4F1] px-6">
 
@@ -15,23 +21,30 @@ export default function LoginPage() {
         <div className="mt-8 space-y-4">
 
           <input
-  type="email"
-  placeholder="Email"
-  className="w-full rounded-2xl border border-black/10 px-5 py-4 text-black placeholder:text-black/40 outline-none focus:border-[#B9CAB8]"
-/>
+            type="email"
+            placeholder="Email"
+            className="w-full rounded-2xl border border-black/10 px-5 py-4 text-black placeholder:text-black/40 outline-none focus:border-[#B9CAB8]"
+          />
 
-<input
-  type="password"
-  placeholder="Password"
-  className="w-full rounded-2xl border border-black/10 px-5 py-4 text-black placeholder:text-black/40 outline-none focus:border-[#B9CAB8]"
-/>
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full rounded-2xl border border-black/10 px-5 py-4 text-black placeholder:text-black/40 outline-none focus:border-[#B9CAB8]"
+          />
 
-         <a
-  href="/dashboard"
-  className="block w-full rounded-2xl bg-[#1F2A44] py-4 text-center text-white hover:opacity-90 transition"
->
-  Login as employee
-</a>
+          {error && (
+            <p className="text-sm text-red-500">
+              {error}
+            </p>
+          )}
+
+          <button
+            onClick={() => setError("You must create an account first.")}
+            className="block w-full rounded-2xl bg-[#1F2A44] py-4 text-center text-white hover:opacity-90 transition"
+          >
+            Login as employee
+          </button>
+
         </div>
 
         <p className="mt-6 text-center text-sm text-black/60">

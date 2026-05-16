@@ -144,12 +144,15 @@ export default function EmployerRegisterPage() {
           </div>
 
           {/* BUTTON */}
-          <a
-            href="/employeractuallogin"
-            className="block w-full rounded-2xl bg-[#1F2A44] py-4 text-center font-medium text-white hover:opacity-90 transition"
-          >
-            Register Business
-          </a>
+           <a
+  href="https://forms.gle/ZtjN6m48C9FgPev66"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block w-full rounded-2xl bg-[#1F2A44] py-4 text-center font-medium text-white hover:opacity-90 transition"
+>
+  Join Waiting List
+</a>
+
 
         </div>
 

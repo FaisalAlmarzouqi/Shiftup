@@ -1,4 +1,10 @@
+"use client";
+
+import { useState } from "react";
+
 export default function EmployerLoginPage() {
+  const [error, setError] = useState("");
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#F5F4F1] px-6">
 
@@ -26,12 +32,18 @@ export default function EmployerLoginPage() {
             className="w-full rounded-2xl border border-black/10 px-5 py-4 text-black placeholder:text-black/40 outline-none focus:border-[#B9CAB8]"
           />
 
-          <a
-            href="/employerdashboard"
+          {error && (
+            <p className="text-sm text-red-500">
+              {error}
+            </p>
+          )}
+
+          <button
+            onClick={() => setError("You must create an account first.")}
             className="block w-full rounded-2xl bg-[#1F2A44] py-4 text-center text-white transition hover:opacity-90"
           >
             Login as employer
-          </a>
+          </button>
 
         </div>
 

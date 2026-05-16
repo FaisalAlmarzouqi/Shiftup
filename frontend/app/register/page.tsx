@@ -108,12 +108,14 @@ export default function RegisterPage() {
 
 </div>
           {/* BUTTON */}
-          <a
-            href="/login"
-            className="block w-full rounded-2xl bg-[#1F2A44] py-4 text-center font-medium text-white hover:opacity-90 transition"
-          >
-            Create Account
-          </a>
+         <a
+  href="https://forms.gle/ZtjN6m48C9FgPev66"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block w-full rounded-2xl bg-[#1F2A44] py-4 text-center font-medium text-white hover:opacity-90 transition"
+>
+  Join Waiting List
+</a>
 
         </div>
 
