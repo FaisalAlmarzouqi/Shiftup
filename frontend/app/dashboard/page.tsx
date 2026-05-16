@@ -69,73 +69,80 @@ export default function DashboardPage() {
             <div className="grid gap-5">
 
            {/* JOB CARDS */}
-<div className="grid gap-6">
+<div className="grid grid-cols-1 gap-5 md:grid-cols-2">
 
   {[
     {
       title: "Photography Assistant",
-      desc: "Assist with equipment setup and lighting during a private photoshoot.",
+      desc: "Assist with lighting and camera setup.",
       tag: "Verified",
       time: "4 PM - 9 PM",
       location: "Manama",
       pay: "35 BD",
+      image:
+        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
     },
     {
       title: "Background Actor",
-      desc: "Looking for extras for a short commercial shoot this weekend.",
+      desc: "Extras needed for a commercial shoot.",
       tag: "Trusted",
       time: "Weekend",
       location: "Seef",
       pay: "50 BD",
+      image:
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
     },
     {
       title: "Gaming Event Assistant",
-      desc: "Help manage registrations and setup for a local gaming tournament.",
+      desc: "Help organize a local gaming tournament.",
       tag: "VIP",
       time: "Friday",
       location: "Isa Town",
       pay: "45 BD",
+      image:
+        "https://images.unsplash.com/photo-1542751371-adc38448a05e",
     },
     {
       title: "Pet Sitting Helper",
-      desc: "Help care for two small dogs during evening hours.",
+      desc: "Care for two small dogs during evenings.",
       tag: "Verified",
-      time: "Evening Shift",
+      time: "Evening",
       location: "Riffa",
       pay: "20 BD",
+      image:
+        "https://images.unsplash.com/photo-1517849845537-4d257902454a",
     },
   ].map((job, index) => (
     <div
       key={index}
-      className="overflow-hidden rounded-[32px] bg-white shadow-[0_2px_15px_rgba(0,0,0,0.05)]"
+      className="overflow-hidden rounded-[28px] bg-white shadow-[0_2px_12px_rgba(0,0,0,0.05)] transition hover:-translate-y-1"
     >
 
-      {/* TOP IMAGE */}
-      <div className="relative h-52 w-full">
+      {/* IMAGE */}
+      <div className="relative h-44 w-full">
         <img
-          src="/job-example.jpg"
-          alt="Job"
+          src={`${job.image}?auto=format&fit=crop&w=900&q=80`}
+          alt={job.title}
           className="h-full w-full object-cover"
         />
 
-        <div className="absolute right-4 top-4 rounded-full bg-[#A0CDCE] px-4 py-2 text-sm font-medium text-[#2D5B5C] backdrop-blur-md">
+        <span className="absolute right-4 top-4 rounded-full bg-[#A0CDCE] px-3 py-1 text-xs font-medium text-[#2D5B5C] backdrop-blur-md">
           {job.tag}
-        </div>
+        </span>
       </div>
 
       {/* CONTENT */}
-      <div className="p-6">
+      <div className="p-5">
 
-        {/* TITLE */}
-        <div className="flex items-start gap-4">
+        {/* PROFILE + TITLE */}
+        <div className="flex items-center gap-3">
 
-          {/* DEFAULT PROFILE ICON */}
-          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#DCEEEE]">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DCEEEE]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="h-7 w-7 text-[#2D5B5C]"
+              className="h-6 w-6 text-[#2D5B5C]"
             >
               <path
                 fillRule="evenodd"
@@ -145,37 +152,42 @@ export default function DashboardPage() {
             </svg>
           </div>
 
-          <div className="flex-1">
-            <h2 className="text-2xl font-bold text-[#2D5B5C]">
+          <div>
+            <h2 className="text-xl font-bold text-[#2D5B5C]">
               {job.title}
             </h2>
 
-            <p className="mt-2 text-[15px] leading-relaxed text-black/60">
-              {job.desc}
+            <p className="text-sm text-black/50">
+              Posted recently
             </p>
           </div>
 
         </div>
 
-        {/* INFO PILLS */}
-        <div className="mt-6 flex flex-wrap gap-3">
+        {/* DESCRIPTION */}
+        <p className="mt-4 text-sm leading-relaxed text-black/60">
+          {job.desc}
+        </p>
 
-          <div className="rounded-full bg-[#F5F4F1] px-4 py-2 text-sm text-[#2D5B5C]">
+        {/* INFO */}
+        <div className="mt-5 flex flex-wrap gap-2 text-sm">
+
+          <div className="rounded-full bg-[#F5F4F1] px-3 py-2 text-[#2D5B5C]">
             ⏰ {job.time}
           </div>
 
-          <div className="rounded-full bg-[#F5F4F1] px-4 py-2 text-sm text-[#2D5B5C]">
+          <div className="rounded-full bg-[#F5F4F1] px-3 py-2 text-[#2D5B5C]">
             📍 {job.location}
           </div>
 
-          <div className="rounded-full bg-[#F5F4F1] px-4 py-2 text-sm text-[#2D5B5C]">
+          <div className="rounded-full bg-[#F5F4F1] px-3 py-2 text-[#2D5B5C]">
             💰 {job.pay}
           </div>
 
         </div>
 
-        {/* APPLY BUTTON */}
-        <button className="mt-6 w-full rounded-2xl bg-[#BE220D] px-6 py-3 font-medium text-white transition hover:scale-[1.01]">
+        {/* BUTTON */}
+        <button className="mt-5 w-full rounded-2xl bg-[#BE220D] py-3 font-medium text-white transition hover:opacity-90">
           Apply Now
         </button>
 
