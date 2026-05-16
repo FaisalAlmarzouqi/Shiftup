@@ -49,11 +49,11 @@ export default function home() {
             <div className="mb-4 flex items-center justify-between">
 
               <h2 className="text-2xl font-bold text-[#1F2A44]">
-                Get Started
+                Do you need work? 
               </h2>
 
               <span className="rounded-full bg-[#D6E0D4] px-4 py-2 text-sm font-medium text-[#1F2A44]">
-                Employee
+               Guest Employee
               </span>
 
             </div>
@@ -90,18 +90,17 @@ export default function home() {
             <div className="mb-4 flex items-center justify-between">
 
               <h2 className="text-2xl font-bold text-[#1F2A44]">
-                Post a Job
+                Want to Post a Job?
               </h2>
 
               <span className="rounded-full bg-[#D6E0D4] px-4 py-2 text-sm font-medium text-[#1F2A44]">
-                Employer
+               Guest Employer
               </span>
 
             </div>
 
             <p className="text-black/60 leading-relaxed">
-              Find trusted temporary workers and manage applications
-              through ShiftUp.
+              Find trusted temporary workers through ShiftUp.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3 text-sm">
