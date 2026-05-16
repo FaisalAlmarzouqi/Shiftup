@@ -28,14 +28,14 @@ export default function DashboardPage() {
 
           <div className="flex items-center gap-3">
 
-            <button className="rounded-full px-5 py-2 text-sm font-medium hover:bg-black/5 transition">
-              Contact
-            </button>
+            
 
-            <button className="rounded-full bg-[#2D5B5C] px-6 py-3 text-sm font-medium text-white hover:opacity-90 transition">
-              Your Account
-            </button>
-
+            <button
+  onClick={() => window.location.href = "/login"}
+  className="rounded-full bg-[#2D5B5C] px-6 py-3 text-sm font-medium text-white hover:opacity-90 transition"
+>
+  Get started as a employee
+</button>
           </div>
 
         </div>
