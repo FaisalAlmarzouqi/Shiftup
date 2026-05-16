@@ -167,11 +167,11 @@ export default function DashboardPage() {
 
                 <div>
                   <h3 className="font-bold text-[#2D5B5C]">
-                    Faisal
+                    Guest User
                   </h3>
 
                   <p className="text-sm text-black/60">
-                    Verified User
+                    Not Verified Yet
                   </p>
                 </div>
 

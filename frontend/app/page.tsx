@@ -42,7 +42,7 @@ export default function home() {
 
           {/* GET STARTED */}
           <a
-            href="/login"
+            href="/dashboard"
             className="rounded-3xl bg-white p-8 text-left shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition hover:scale-[1.02]"
           >
 
